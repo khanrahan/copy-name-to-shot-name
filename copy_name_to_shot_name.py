@@ -27,17 +27,29 @@ To Install:
 
 import flame
 
-VERSION = (0, 0, 1, 'dev')
+TITLE = 'Find and Replace in Name Advance'
+VERSION_INFO = (0, 0, 1, 'dev')
+VERSION = '.'.join([str(num) for num in VERSION_INFO])
+TITLE_VERSION = f'{TITLE} v{VERSION}'
+
+MESSAGE_PREFIX = '[PYTHON]'
+
+
+def message(string):
+    """Print message to shell window and append global MESSAGE_PREFIX."""
+    print(' '.join([MESSAGE_PREFIX, string]))
 
 
 def copy_segment_name_to_shot_name(selection):
 
-    message(__version_title__)
-    message("Script called from {}".format(__file__))
+    message(TITLE_VERSION)
+    message(f'Script called from {__file__}')
 
     for segment in selection:
         segment.shot_name = segment.name
         message("{} copied to shot name.".format(segment.name.get_value()))
+
+    message('Done!')
 
 
 def scope_timeline_clip(selection):
