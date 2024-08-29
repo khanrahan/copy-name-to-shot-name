@@ -46,7 +46,7 @@ def message(string):
 
 
 def copy_segment_name_to_shot_name(selection):
-
+    """The main loop of this script."""
     message(TITLE_VERSION)
     message(f'Script called from {__file__}')
 
@@ -58,7 +58,11 @@ def copy_segment_name_to_shot_name(selection):
 
 
 def scope_timeline_clip(selection):
+    """Filter for PySegments or PyTransitions.
 
+    PyTransitions are included because typical box or shift + click selections will
+    include them.
+    """
     valid_objects = (
             flame.PySegment,
             flame.PyTransition)
@@ -67,7 +71,7 @@ def scope_timeline_clip(selection):
 
 
 def get_timeline_custom_ui_actions():
-
+    """Add right click menu item."""
     return [{'name': 'Copy...',
              'actions': [{'name': 'Segment Name to Shot Name',
                           'isVisible': scope_timeline_clip,
