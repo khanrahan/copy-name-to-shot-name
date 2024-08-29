@@ -32,7 +32,7 @@ To Install:
 
 import flame
 
-TITLE = 'Find and Replace in Name Advance'
+TITLE = 'Copy Name to Shot Name'
 VERSION_INFO = (0, 0, 1, 'dev')
 VERSION = '.'.join([str(num) for num in VERSION_INFO])
 TITLE_VERSION = f'{TITLE} v{VERSION}'
