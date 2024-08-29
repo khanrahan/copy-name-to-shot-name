@@ -46,7 +46,7 @@ def copy_segment_name_to_shot_name(selection):
     message(f'Script called from {__file__}')
 
     for segment in selection:
-        segment.shot_name = segment.name
+        segment.shot_name.set_value(segment.name.get_value())
         message("{} copied to shot name.".format(segment.name.get_value()))
 
     message('Done!')
