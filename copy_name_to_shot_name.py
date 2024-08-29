@@ -46,15 +46,19 @@ def copy_segment_name_to_shot_name(selection):
     message(f'Script called from {__file__}')
 
     for segment in selection:
-        segment.shot_name.set_value(segment.name.get_value())
-        message("{} copied to shot name.".format(segment.name.get_value()))
+        if isinstance(segment, flame.PySegment):
+            segment.shot_name.set_value(segment.name.get_value())
 
     message('Done!')
 
 
 def scope_timeline_clip(selection):
 
-    return all(isinstance(item, flame.PySegment) for item in selection)
+    valid_objects = (
+            flame.PySegment,
+            flame.PyTransition)
+
+    return all(isinstance(item, valid_objects) for item in selection)
 
 
 def get_timeline_custom_ui_actions():
