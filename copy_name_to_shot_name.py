@@ -24,19 +24,7 @@ To Install:
     /opt/Autodesk/user/<user name>/python
 """
 
-from __future__ import print_function
-
-__title__ = "Copy Segment to Shot Name"
-__version_info__ = (0, 0, 2)
-__version__ = ".".join([str(num) for num in __version_info__])
-__version_title__ = "{} v{}".format(__title__, __version__)
-
-MESSAGE_PREFIX = "[PYTHON HOOK]"
-
-def message(string):
-    """Print message to shell window and append global MESSAGE_PREFIX."""
-
-    print(" ".join([MESSAGE_PREFIX, string]))
+VERSION = (0, 0, 1)
 
 
 def copy_segment_name_to_shot_name(selection):
@@ -64,5 +52,5 @@ def get_timeline_custom_ui_actions():
              'actions': [{'name': "Segment Name to Shot Name",
                           'isVisible': scope_timeline_clip,
                           'execute': copy_segment_name_to_shot_name,
-                          'minimumVersion': "2020"}]
+                          'minimumVersion': "2022"}]
            }]
