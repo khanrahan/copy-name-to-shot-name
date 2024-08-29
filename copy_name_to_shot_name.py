@@ -40,10 +40,7 @@ def copy_segment_name_to_shot_name(selection):
 def scope_timeline_clip(selection):
     import flame
 
-    for item in selection:
-        if isinstance(item, flame.PySegment):
-            return True
-    return False
+    return all(isinstance(item, flame.PySegment) for item in selection)
 
 
 def get_timeline_custom_ui_actions():
