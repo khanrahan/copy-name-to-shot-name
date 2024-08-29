@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-
 """
 Script Name: Copy Segment Name to Shot Name
 Written By: Kieran Hanrahan
