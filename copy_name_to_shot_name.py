@@ -1,11 +1,16 @@
 #!/usr/bin/env python
 
 """
-Copy Segment Name to Shot Name
+Script Name: Copy Segment Name to Shot Name
+Written By: Kieran Hanrahan
 
-URL:
+Script Version: 0.0.1
+Flame Version: 2021
 
-    https://github.com/khanrahan/copy-name-to-shot-name
+URL: http://github.com/khanrahan/copy-name-to-shot-name
+
+Creation Date: 07.21.22
+Update Date: 07.21.22
 
 Description:
 
