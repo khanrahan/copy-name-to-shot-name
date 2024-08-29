@@ -24,6 +24,9 @@ To Install:
     /opt/Autodesk/user/<user name>/python
 """
 
+
+import flame
+
 VERSION = (0, 0, 1, 'dev')
 
 
@@ -38,7 +41,6 @@ def copy_segment_name_to_shot_name(selection):
 
 
 def scope_timeline_clip(selection):
-    import flame
 
     return all(isinstance(item, flame.PySegment) for item in selection)
 
