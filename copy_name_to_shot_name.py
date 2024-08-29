@@ -24,7 +24,7 @@ To Install:
     /opt/Autodesk/user/<user name>/python
 """
 
-VERSION = (0, 0, 1)
+VERSION = (0, 0, 1, 'dev')
 
 
 def copy_segment_name_to_shot_name(selection):
@@ -48,9 +48,9 @@ def scope_timeline_clip(selection):
 
 def get_timeline_custom_ui_actions():
 
-    return [{'name': "Copy...",
-             'actions': [{'name': "Segment Name to Shot Name",
+    return [{'name': 'Copy...',
+             'actions': [{'name': 'Segment Name to Shot Name',
                           'isVisible': scope_timeline_clip,
                           'execute': copy_segment_name_to_shot_name,
-                          'minimumVersion': "2022"}]
+                          'minimumVersion': '2022'}]
            }]
