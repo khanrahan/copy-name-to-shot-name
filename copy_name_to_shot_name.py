@@ -31,7 +31,7 @@ To Install:
 import flame
 
 TITLE = 'Copy Name to Shot Name'
-VERSION_INFO = (2, 0, 0)
+VERSION_INFO = (1, 0, 0)
 VERSION = '.'.join([str(num) for num in VERSION_INFO])
 TITLE_VERSION = f'{TITLE} v{VERSION}'
 
