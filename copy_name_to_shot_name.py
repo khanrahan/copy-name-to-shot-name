@@ -8,7 +8,7 @@ Flame Version: 2022
 URL: http://github.com/khanrahan/copy-name-to-shot-name
 
 Creation Date: 07.21.22
-Update Date: 08.28.24
+Update Date: 03.06.24
 
 Description:
 
